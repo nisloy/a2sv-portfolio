@@ -30,7 +30,8 @@ const translations = {
       title: 'Education & Awards'
     },
     contact: {
-      title: 'Get In Touch'
+      title: 'Get In Touch',
+      views: 'Views'
     }
   },
   RW: {
@@ -60,7 +61,8 @@ const translations = {
       title: 'Amashuri n\'Ibihembo'
     },
     contact: {
-      title: 'Twandikire'
+      title: 'Twandikire',
+      views: 'Inshuro zasuwe'
     }
   }
 }

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import SectionContainer from './SectionContainer.vue'
+import ViewCounter from './ViewCounter.vue'
 import { Mail, Phone, Linkedin, Gitlab } from 'lucide-vue-next'
 import { useI18n } from '../composables/useI18n'
 
@@ -51,7 +52,8 @@ const contacts = [
       </a>
     </div>
     
-    <footer class="mt-24 pt-8 border-t border-border text-center text-muted-foreground text-sm">
+    <footer class="mt-24 pt-8 border-t border-border text-center text-muted-foreground text-sm flex flex-col items-center gap-6">
+      <ViewCounter />
       <p>© {{ new Date().getFullYear() }} Amuza MUGISHA. Built with Vue.js & Tailwind CSS.</p>
     </footer>
   </SectionContainer>
