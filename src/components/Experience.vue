@@ -4,43 +4,12 @@ import { Briefcase } from 'lucide-vue-next'
 import { useI18n } from '../composables/useI18n'
 
 const { t } = useI18n()
-
-const experiences = [
-  {
-    role: 'Applications Developer',
-    company: 'Africlouds Ltd',
-    location: 'Kigali, Rwanda',
-    period: '2023 – Present',
-    highlights: [
-      {
-        title: 'Billing Integration',
-        description: 'Supported 20% of the WASAC EBM integration, automating customer invoicing and securing reliable data transmission.'
-      },
-      {
-        title: 'Full-Stack M&E System',
-        description: 'Led the complete lifecycle of a Monitoring & Evaluation platform — from Figma prototyping to production — using Node.js, Vue.js and Tailwind CSS.'
-      },
-      {
-        title: 'National Projects',
-        description: 'Delivered technical solutions for NAEB and Never Again Rwanda, maintaining data integrity within Linux-based environments.'
-      },
-      {
-        title: 'Mobile & Web',
-        description: 'Built cross-platform apps with Dart/Flutter and the Frappe Framework for seamless mobile and web performance.'
-      },
-      {
-        title: 'Infrastructure',
-        description: 'Managed Ubuntu/Linux staging environments, configured Nginx, and enforced Git-based collaboration workflows.'
-      }
-    ]
-  }
-]
 </script>
 
 <template>
   <SectionContainer id="experience" :title="t.experience.title">
     <div class="space-y-16">
-      <div v-for="(exp, index) in experiences" :key="index" class="relative pl-12">
+      <div v-for="(exp, index) in t.experience.items" :key="index" class="relative pl-12">
         <!-- Timeline line -->
         <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-accent/30 rounded-full"></div>
         

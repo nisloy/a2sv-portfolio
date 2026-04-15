@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useIntersectionObserver } from '@vueuse/core'
 
 defineProps<{
   id: string
@@ -8,28 +7,22 @@ defineProps<{
 }>()
 
 const target = ref(null)
-const isVisible = ref(false)
-
-useIntersectionObserver(
-  target,
-  ([{ isIntersecting }]) => {
-    if (isIntersecting) isVisible.value = true
-  },
-  { threshold: 0.1 }
-)
+// Intersection observer simplified for now to ensure visibility
 </script>
 
 <template>
   <section 
     :id="id" 
     ref="target"
-    class="section-padding transition-all duration-1000 transform"
-    :class="[isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
+    class="section-padding"
   >
     <div class="max-w-6xl mx-auto">
-      <h2 v-if="title" class="text-3xl md:text-4xl font-bold mb-12 text-accent">
-        {{ title }}
-      </h2>
+      <div v-if="title" class="mb-12">
+        <h2 class="text-3xl md:text-5xl font-black tracking-tight mb-4 uppercase">
+          {{ title }}
+        </h2>
+        <div class="w-16 h-2 bg-accent rounded-full"></div>
+      </div>
       <slot />
     </div>
   </section>

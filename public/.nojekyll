@@ -1,0 +1,2 @@
+# This file tells GitHub Pages not to use Jekyll to process the static files.
+# This ensures that folders starting with an underscore (like _astro or _nuxt) are correctly served.
