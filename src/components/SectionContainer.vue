@@ -1,19 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
 defineProps<{
   id: string
   title?: string
 }>()
-
-const target = ref(null)
-// Intersection observer simplified for now to ensure visibility
 </script>
 
 <template>
   <section 
     :id="id" 
-    ref="target"
     class="section-padding"
   >
     <div class="max-w-6xl mx-auto">

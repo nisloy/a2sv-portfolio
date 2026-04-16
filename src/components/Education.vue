@@ -12,7 +12,7 @@ const { t } = useI18n()
       <div class="space-y-8">
         <div v-for="(edu, index) in t.education.items" :key="index" class="relative pl-8">
           <div class="absolute left-0 top-1 text-accent">
-            < GraduationCap :size="20" />
+            <GraduationCap :size="20" />
           </div>
           <h3 class="text-xl font-bold">{{ edu.degree }}</h3>
           <p class="text-accent/80 font-medium">{{ edu.institution }} <span v-if="edu.period" class="text-muted-foreground ml-2">({{ edu.period }})</span></p>
